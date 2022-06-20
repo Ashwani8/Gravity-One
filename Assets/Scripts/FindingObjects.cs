@@ -6,12 +6,15 @@ using UnityEngine;
 // although these objects are not childeren of the empty Game object, it works.
 public class FindingObjects : MonoBehaviour
 {
-    GameObject searchObj;
+    GameObject searchObj, searchObj2;
     // Start is called before the first frame update
     void Start()
     {
-       searchObj= GameObject.Find("Cube");
+       searchObj= GameObject.Find("Sphere");
         Destroy(searchObj);
+        // searching a child object in heriarchy
+        searchObj2 = GameObject.Find("Cube/Cube2/Enemy");
+        Destroy(searchObj2, 2f);
     }
 
     // Update is called once per frame
