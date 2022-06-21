@@ -41,6 +41,9 @@ public class InputTest : MonoBehaviour
        if (Input.GetButtonDown("Jump"))
         { // its CAPITAL J in jump, otherwise it will geive an error
             print("space bar is pressed for jump");
+            // i have added rigid body to gameobject and ground for a refrence although not needed here.
+            transform.position += new Vector3(0, 1, 0); // jump up by increasing y by one unit.
+
         }
     } 
 }
