@@ -59,6 +59,14 @@ public class InputTest : MonoBehaviour
         // Use Get Axis for Smooth motion, from 0 to 1
         //print(xInput);
         //print(yInput);
-        transform.Translate(xInput, yInput, 0); // will move object with arrow keys
+        // will move object with arrow keys or ctrl +a or d, up shipt+w or s
+        transform.Translate(xInput, yInput, 0);
+
+        // use Mouse click Or left ctrl on kye board  to Fire1
+        
+        if (Input.GetButtonDown( "Fire1"))
+        {
+            print("left click on mouse or left ctrl key was pressed");
+        }
     } 
 }
