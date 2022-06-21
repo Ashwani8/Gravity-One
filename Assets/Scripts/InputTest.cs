@@ -8,7 +8,7 @@ public class InputTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,17 +17,23 @@ public class InputTest : MonoBehaviour
         // We will check if a specific key is pressed, hold , or released
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            print("space key is pressed down");
+            // print("space bar is pressed down");
+            // change game object color to green when pressed
+            GetComponent<Renderer>().material.color = Color.green;
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
-            print("space key is hold down");
+            // print("space key is hold down");
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            print("space key is Released");
+            // print("space bar is Released");
+            // change object color to red after the key is released
+            GetComponent<Renderer>().material.color = Color.red;
+
         }
-    }
+
+        }
 }
