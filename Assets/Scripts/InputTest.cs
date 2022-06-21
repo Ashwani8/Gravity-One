@@ -63,10 +63,29 @@ public class InputTest : MonoBehaviour
         transform.Translate(xInput, yInput, 0);
 
         // use Mouse click Or left ctrl on kye board  to Fire1
-        
-        if (Input.GetButtonDown( "Fire1"))
-        {
-            print("left click on mouse or left ctrl key was pressed");
+
+        /*    if (Input.GetButtonDown( "Fire1"))
+            {
+                print("left click on mouse or left ctrl key was pressed");
+            } */
+
+
+        // detecting mouse mouse click
+        if (Input.GetMouseButtonDown(0))
+        { // zero means left click
+            print("left mouse clcik detected");
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        { // 1 means Right click
+            print("Right mouse clcik detected");
+        }
+        if (Input.GetMouseButtonDown(2))
+        { // 2 means scroll wheel or third button click
+            print("left mouse clcik detected");
         }
     } 
+
+
+
 }
