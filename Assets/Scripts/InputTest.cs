@@ -19,7 +19,7 @@ public class InputTest : MonoBehaviour
         {
             // print("space bar is pressed down");
             // change game object color to green when pressed
-            GetComponent<Renderer>().material.color = Color.green;
+         GetComponent<Renderer>().material.color = Color.green;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -35,5 +35,12 @@ public class InputTest : MonoBehaviour
 
         }
 
+
+        // Note that there are some predefined way to access button as explained earlier, like arrow keys
+        // for left left/right, up/down, motion and space bar for Jump
+       if (Input.GetButtonDown("Jump"))
+        { // its CAPITAL J in jump, otherwise it will geive an error
+            print("space bar is pressed for jump");
         }
+    } 
 }
