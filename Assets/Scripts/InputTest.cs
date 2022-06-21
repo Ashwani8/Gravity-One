@@ -77,7 +77,8 @@ public class InputTest : MonoBehaviour
             print(Input.mousePosition); // will give x, y, and z component
             // z will always be zero since screen is a 2D world,
             print(Input.mousePosition.x + "," + Input.mousePosition.y);
-            // these are screen coordinates.
+            // these are screen coordinates.we need to convert them to world coordinates
+            // if we want to instatiate soem object on click
         }
 
         if (Input.GetMouseButtonDown(1))
