@@ -7,7 +7,7 @@ public class InputTest : MonoBehaviour
 {
 
    public float speed = 1;
-
+    public GameObject ball;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,7 +78,20 @@ public class InputTest : MonoBehaviour
             // z will always be zero since screen is a 2D world,
             print(Input.mousePosition.x + "," + Input.mousePosition.y);
             // these are screen coordinates.we need to convert them to world coordinates
-            // if we want to instatiate soem object on click
+           // create a vector to store 
+            Vector3 clickPosition = Input.mousePosition; // will give us x, y, z=0 screen coordinates
+
+            // if we want to instatiate game object on click, we need to place it in front
+            // of camera so z!= 0
+            clickPosition.z = 10f; // to put object in view 
+
+            // screen coordinate convert to world coordinates
+            clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
+
+            // Instatiate at click position, make sure to attach prefab at appropriate place
+            // in the script in unity to see the effect
+            Instantiate(ball, clickPosition, Quaternion.identity);
+
         }
 
         if (Input.GetMouseButtonDown(1))
