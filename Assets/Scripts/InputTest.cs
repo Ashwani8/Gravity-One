@@ -70,10 +70,14 @@ public class InputTest : MonoBehaviour
             } */
 
 
-        // detecting mouse mouse click
+        // detecting mouse click and its current position
         if (Input.GetMouseButtonDown(0))
         { // zero means left click
-            print("left mouse clcik detected");
+          // print("left mouse clcik detected");
+            print(Input.mousePosition); // will give x, y, and z component
+            // z will always be zero since screen is a 2D world,
+            print(Input.mousePosition.x + "," + Input.mousePosition.y);
+            // these are screen coordinates.
         }
 
         if (Input.GetMouseButtonDown(1))
@@ -84,6 +88,8 @@ public class InputTest : MonoBehaviour
         { // 2 means scroll wheel or third button click
             print("left mouse clcik detected");
         }
+
+
     } 
 
 
