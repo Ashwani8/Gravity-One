@@ -5,7 +5,8 @@ using UnityEngine;
 // project settings>Input>axis such as "jump" for space key
 public class InputTest : MonoBehaviour
 {
-   
+
+   public float speed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -51,9 +52,13 @@ public class InputTest : MonoBehaviour
         // will go smoothly from 0 to -1 or +1 value
         float xInput = Input.GetAxis("Horizontal"); // we are storin 
         float yInput = Input.GetAxis("Vertical");
-
+        // we are using delta time to change x positon per second rather than frame speed time as different
+        // system may have different frame update speed
+        xInput = xInput * speed * Time.deltaTime;
+        yInput = yInput * speed * Time.deltaTime;
         // Use Get Axis for Smooth motion, from 0 to 1
-        print(xInput);
-        print(yInput);
+        //print(xInput);
+        //print(yInput);
+        transform.Translate(xInput, yInput, 0); // will move object with arrow keys
     } 
 }
