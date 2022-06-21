@@ -5,6 +5,8 @@ using UnityEngine;
 // project settings>Input>axis such as "jump" for space key
 public class InputTest : MonoBehaviour
 {
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +47,13 @@ public class InputTest : MonoBehaviour
             transform.position += new Vector3(0, 1, 0); // jump up by increasing y by one unit.
 
         }
+        // Use GetAxis for Smooth motion instead of Key, left/Right arrow "Horizontal"/"Vertical" motion 
+        // will go smoothly from 0 to -1 or +1 value
+        float xInput = Input.GetAxis("Horizontal"); // we are storin 
+        float yInput = Input.GetAxis("Vertical");
+
+        // Use Get Axis for Smooth motion, from 0 to 1
+        print(xInput);
+        print(yInput);
     } 
 }
