@@ -102,10 +102,13 @@ public class InputTest : MonoBehaviour
         { // 2 means scroll wheel or third button click
             print("left mouse clcik detected");
         }
+               
+    }
 
-
-    } 
-
-
+    // Destroying object on mouse click
+    void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
 
 }
