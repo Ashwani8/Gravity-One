@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // This script load level on mouse click, we will need Scenemanagement package for this
+// make sure all the scene levels are in build settings
 public class LevelLoader : MonoBehaviour
 {
-    public 
+    public int sceneNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,8 @@ public class LevelLoader : MonoBehaviour
     }
     void LoadLevel()
     {
-        SceneManager.LoadScene("level2");
+       // SceneManager.LoadScene("level2");
+       // Method 2 is using build index, visible in the build setting
+        SceneManager.LoadScene(sceneNumber);
     }
 }
