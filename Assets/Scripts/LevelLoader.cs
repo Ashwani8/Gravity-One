@@ -19,7 +19,8 @@ public class LevelLoader : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            LoadLevel();
+           // LoadLevel();
+            ReLoad(); 
         }
         
     }
@@ -29,4 +30,11 @@ public class LevelLoader : MonoBehaviour
        // Method 2 is using build index, visible in the build setting
         SceneManager.LoadScene(sceneNumber);
     }
+
+    // reload the scene, in which we are cuurently in case we loss or exit
+    void ReLoad()
+    {
+       // this will store the build index number from current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
 }
