@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PhysicsTest : MonoBehaviour
 {
-    Rigidbody rb;// get access to rigid body
+    Rigidbody rb; // get access to rigid body
+    public GameObject Bullet;
+    public Transform bulletPosition;
     float xInput, zInput;
-    public float speed, jumpForce;
-    bool jump = false;
+    public float speed, jumpForce, bulletSpeed;
+    bool jump = false, shoot = false;
     // it is good idea to use awake method rathar than start for position. similarly
     // it is good idea to use FixedUpdate for Physics activities rather than regular update
     // method as the later depends on computer speed
@@ -35,6 +37,11 @@ public class PhysicsTest : MonoBehaviour
             jump = true;
             
         }
+        // check if left mouse or left ctrl is pressed
+        if (Input.GetButtonDown("Fire1"))
+        {
+            shoot = true;
+        }
     
     }
 
@@ -50,10 +57,25 @@ public class PhysicsTest : MonoBehaviour
             Jump(); // call jump function when space bar is pressed
             jump = false;
         }
+        // call shoot is true i.e. mouse clicked
+        if (shoot)
+        {
+            Shoot();
+            shoot = false;
+        }
     }
    
     void Jump()
     {// add force in y 
         rb.AddForce(0, jumpForce, 0); // make sure to set jumpForce value >100f
+    }
+    // dispense bullets
+    void Shoot()
+    {// we are going to instatiate and then store it inside a new GameObject
+       GameObject bulletSpawn= Instantiate(Bullet, bulletPosition.position, Bullet.transform.rotation);
+        // note the 3rd point, since we roated it by 90 deg
+        // add velocity to move bullet, make sure to assign rigidbody to bullet prefab
+        // and get Rigidbody component to give it a velocity
+        bulletSpawn.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, bulletSpeed);
     }
 }
