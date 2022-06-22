@@ -24,4 +24,8 @@ public class Car
         Debug.Log("Applying breaks");
     }
     
+    public void CarSpeed()
+    {
+        Debug.Log(speed);
+    }
 }
