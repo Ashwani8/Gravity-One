@@ -50,7 +50,7 @@ public class InputTest : MonoBehaviour
         }
         // Use GetAxis for Smooth motion instead of Key, left/Right arrow "Horizontal"/"Vertical" motion 
         // will go smoothly from 0 to -1 or +1 value
-        float xInput = Input.GetAxis("Horizontal"); // we are storin 
+        float xInput = Input.GetAxis("Horizontal"); // we are storing
         float yInput = Input.GetAxis("Vertical");
         // we are using delta time to change x positon per second rather than frame speed time as different
         // system may have different frame update speed
