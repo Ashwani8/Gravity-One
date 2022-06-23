@@ -24,6 +24,7 @@ public class CarTest : MonoBehaviour
 
         //myCar.CarSpeed();
         //suzuki.CarSpeed();
+        myCar.PrintCarDetails();
     }
 
     // Update is called once per frame

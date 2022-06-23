@@ -48,4 +48,11 @@ public class Car
     {
         Debug.Log(speed);
     }
+    public void PrintCarDetails()
+    {
+        Debug.Log("speed = " + speed);
+        Debug.Log("Top speed = " + topSpeed);
+        Debug.Log("color = " + color);
+
+    }
 }
