@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+// note the System.Serializable inside the square baracket.
+// this will allow access add values to public variable from other script 
+
 // This is just a simple class without any monobheaviour
 // we Can Not attach it directly to game object
 public class Car 
