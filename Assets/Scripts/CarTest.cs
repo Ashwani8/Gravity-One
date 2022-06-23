@@ -16,7 +16,7 @@ public class CarTest : MonoBehaviour
         myCar.color = "Red";
 
         // create another isntant of the car
-        Car suzuki = new Car();
+        Car suzuki = new Car(12f);
         suzuki.speed = 10f;
         suzuki.topSpeed = 15;
         suzuki.color = "White";

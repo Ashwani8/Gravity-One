@@ -12,8 +12,23 @@ public class Car
     public string color;
     public int topSpeed;
     public float speed;
-
-
+   // default constructor, no void, no returns
+    public Car()
+    {
+        Debug.Log("Car() was called");
+    }
+    // One can create multiple construct
+    public Car(float spd)
+    {// construct with one input of type float
+        this.speed = spd; // repalce speed, with the enetred value of the function
+        Debug.Log("Car(float) was called");
+    }
+    public Car(float speed, string color)
+    { // construct with two inputs, and can be used only for two inputs
+        this.speed = speed;
+        this.color = color;
+        Debug.Log("Car(float, speed) was called");
+    }
     void Move()
     {
         Debug.Log("Moving");
