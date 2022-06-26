@@ -11,7 +11,10 @@ public class Player : MonoBehaviour
         score.Point = 5;
         print(score.Point); // note we cannot print score directly
         score.Point = 7;
-       // print(score.Point);
+        // print(score.Point);
+
+        score.Lives = 6;
+        print(score.Lives);
     }
 
     // Update is called once per frame

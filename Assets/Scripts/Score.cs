@@ -4,6 +4,11 @@ using UnityEngine;
 // we would like to demonstarate some properties of the class
 public class Score 
 {
+    // auto properties
+    private int lives;
+    public int Lives { get; set; }
+    // the above code is same as the get and set below;
+
     private int point;
     public int Point
     { 
