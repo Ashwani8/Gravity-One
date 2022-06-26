@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
         Score score = new Score(); // creating instance of class Score
         score.Point = 5;
         print(score.Point); // note we cannot print score directly
+        score.Point = 7;
+       // print(score.Point);
     }
 
     // Update is called once per frame
@@ -17,4 +19,6 @@ public class Player : MonoBehaviour
     {
         
     }
+    
+   
 }

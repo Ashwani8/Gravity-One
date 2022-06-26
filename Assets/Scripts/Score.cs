@@ -13,8 +13,16 @@ public class Score
         }
 
         set
-        {
-            point = value;
+        { if (value> 5 && value < 10)
+            { point = value;
+                
+            }
+            PrintPoint();
+
         }
+    }
+    void PrintPoint()
+    {
+        Debug.Log(point);
     }
 }
