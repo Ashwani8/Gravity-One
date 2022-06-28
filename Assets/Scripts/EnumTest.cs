@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnumTest : MonoBehaviour
 {
     // Enum allow us to create new type of value or data type
-    enum GameState { Ready, Playing, Pause, GameOver}
-    GameState state;
+   public enum GameState { Ready, Playing, Pause, GameOver}
+   public GameState state;
     // Start is called before the first frame update
     void Start()
     {
