@@ -7,7 +7,13 @@ public class AttributesTest : MonoBehaviour
     // we will use [serializeField] and make the variable private, it will be accessible in first script from unity
  
     [SerializeField]
-    private int speed; 
+    private int speedx; // will be visible in inspector
+
+
+    // will not be visible in inspector
+    [HideInInspector]     public int speedy = 1; 
+
+    // we can also hide public variable from the UI
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +23,7 @@ public class AttributesTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        transform.Translate(speedx * Time.deltaTime, 0, 0);
+        transform.Translate(0, speedy * Time.deltaTime, 0);
     }
 }
