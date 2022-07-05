@@ -11,7 +11,11 @@ public class AttributesTest : MonoBehaviour
 
 
     // will not be visible in inspector
-    [HideInInspector]     public int speedy = 1; 
+    [HideInInspector]     public int speedy = 1;
+
+    // creating a sliding bar in th UI using Range
+    [Range(0, 20)]
+    public float speedZ;
 
     // we can also hide public variable from the UI
     // Start is called before the first frame update
